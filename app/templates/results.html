@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Welcome to Autoseg</title>
+        <style>
+            ul li{
+                display: inline;
+            }
+            img{
+                width: 512px;
+                height: 512px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1>Hello Results Page!</h1>
+        <a href="{{ url_for('index') }}">Back</a><p>
+        <ul>
+        {% for file_url in file_urls %}
+            <li><img src="{{ file_url }}"></li>
+        {% endfor %}
+        </ul>
+      </body>
+</html>
